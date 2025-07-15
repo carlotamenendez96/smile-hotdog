@@ -30,9 +30,9 @@ const Header: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex md:space-x-8">
-            <a href="#menu" onClick={handleNavClick} className="text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Carta</a>
-            <a href="#location" onClick={handleNavClick} className="text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Ubicación</a>
-            <a href="#footer" onClick={handleNavClick} className="text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Contacto</a>
+            <a href="#menu" onClick={handleNavClick} className="nav-underline text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Carta</a>
+            <a href="#location" onClick={handleNavClick} className="nav-underline text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Ubicación</a>
+            <a href="#footer" onClick={handleNavClick} className="nav-underline text-gray-600 hover:text-gray-900 font-semibold text-lg transition duration-150 ease-in-out cursor-pointer">Contacto</a>
           </nav>
           
           <div className="hidden md:block">

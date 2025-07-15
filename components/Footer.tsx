@@ -62,6 +62,9 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-500 text-center">&copy; {new Date().getFullYear()} Smile Hot Dog Gijón. Especialistas en Hot Dogs. Todos los derechos reservados.</p>
+          <p className="text-xs text-gray-600 text-center mt-2">
+            Web creada por <span className="font-semibold">Carlota Menéndez Álvarez</span>
+          </p>
         </div>
       </div>
     </footer>

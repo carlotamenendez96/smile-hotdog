@@ -22,7 +22,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({ item }) => {
         </div>
       )}
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="font-anton text-2xl text-gray-900 tracking-wide mb-2">{item.name}</h3>
+        <h3 className="font-bangers text-2xl text-gray-900 tracking-wide mb-2">{item.name}</h3>
         <p className="text-gray-600 text-sm leading-relaxed flex-grow">
           {item.ingredients}
         </p>

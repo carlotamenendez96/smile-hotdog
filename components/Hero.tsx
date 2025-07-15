@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             El Hot Dog que Gijón Estaba Esperando.
           </h1>
           <p className="mt-6 max-w-xl text-xl text-gray-200">
-            Pan brioche tierno, salchicha bockwurst y combinaciones que te sorprenderán. El auténtico sabor de la calle en el corazón de <strong className="font-semibold text-white">Cimavilla</strong>.
+            Pan brioche tierno, salchicha bockwurst y combinaciones que te sorprenderán. La auténtica explosión de sabor hot dog te espera en el corazón de <strong className="font-semibold text-white">Cimavilla</strong>.
           </p>
            <p className="mt-8 text-xl tracking-widest uppercase font-semibold text-white/80">
             Smile, it's gonna get hot.

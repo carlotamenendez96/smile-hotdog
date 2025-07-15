@@ -29,7 +29,7 @@ const InfoSection: React.FC = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900">Smile Hot Dog Gijón</h3>
               <p className="mt-2 text-gray-600">
-                Parte del grupo <span className="font-semibold" style={{ color: CORPORATE_RED }}>Smile Smash Burger</span>, trayendo la mejor comida callejera a Gijón.
+                Parte del grupo <span className="font-semibold" style={{ color: CORPORATE_RED }}>Smile Smash Burger</span>, trayendo los mejores hot dogs a Gijón.
               </p>
             </div>
             <div className="space-y-6">
@@ -40,13 +40,13 @@ const InfoSection: React.FC = () => {
                   <p className="text-gray-600">C/ Artillería 10, 33201 Gijón, Asturias</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 pt-1"><PhoneIcon /></div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">Teléfono para Pedidos</h4>
                   <a href="tel:+34987654321" className="text-gray-600 hover:text-red-600 transition-colors" title="Llamar para hacer un pedido">987 654 321</a>
                 </div>
-              </div>
+              </div> */}
                <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 pt-1"><ClockIcon /></div>
                 <div>
@@ -55,9 +55,9 @@ const InfoSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <a href="tel:+34987654321" className="inline-block text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg" style={{ backgroundColor: CORPORATE_RED }} title="Llamar para hacer un pedido">
+            {/* <a href="tel:+34987654321" className="inline-block text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg" style={{ backgroundColor: CORPORATE_RED }} title="Llamar para hacer un pedido">
               Llamar para Pedir
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
