@@ -27,7 +27,10 @@ const InfoSection: React.FC = () => {
           </div>
           <div className="space-y-8 bg-white p-8 rounded-lg shadow-md">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">Smile Hot Dog Gijón</h3>
+              <div className="flex items-center space-x-3 mb-2">
+                <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-10 w-10 rounded-full" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-0">Smile Hot Dog Gijón</h3>
+              </div>
               <p className="mt-2 text-gray-600">
                 Parte del grupo <span className="font-semibold" style={{ color: CORPORATE_RED }}>Smile Smash Burger</span>, trayendo los mejores hot dogs a Gijón.
               </p>

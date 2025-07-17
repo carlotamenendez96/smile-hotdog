@@ -25,6 +25,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center space-x-2">
+              <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-10 w-10 rounded-full" />
               <span className="text-3xl font-anton tracking-wider text-gray-900">SMILE<span className="font-pacifico text-3xl" style={{color: CORPORATE_RED, marginLeft: '6px'}}>HotDog</span></span>
             </a>
           </div>

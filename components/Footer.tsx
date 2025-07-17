@@ -22,7 +22,10 @@ const Footer: React.FC = () => {
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6 xl:col-span-1">
-             <h2 className="text-3xl font-anton tracking-wider text-white">SMILE<span className="font-pacifico text-3xl" style={{color: CORPORATE_RED, marginLeft: '6px'}}>HotDog</span></h2>
+            <div className="flex items-center space-x-2">
+              <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-8 w-8 rounded-full" />
+              <h2 className="text-3xl font-anton tracking-wider text-white">SMILE<span className="font-pacifico text-3xl" style={{color: CORPORATE_RED, marginLeft: '6px'}}>HotDog</span></h2>
+            </div>
             <p className="text-gray-400 text-base leading-relaxed">
               Los mejores Hot Dogs de Gijón.<br/>
               C/ Artillería 10<br/>
