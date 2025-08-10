@@ -10,7 +10,7 @@ const InfoSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-anton uppercase text-4xl md:text-5xl tracking-wide text-gray-900">Visítanos en Cimavilla, Gijón</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Estamos en el emblemático barrio de Cimavilla, ¡te esperamos para que pruebes los mejores hot dogs de Asturias!</p>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Estamos en el emblemático barrio de Cimavilla, ¡te esperamos para que pruebes los mejores{' '}<span translate="no">hot dogs</span>{' '}de Asturias!</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="rounded-lg shadow-xl overflow-hidden aspect-w-16 aspect-h-9">
@@ -28,11 +28,17 @@ const InfoSection: React.FC = () => {
           <div className="space-y-8 bg-white p-8 rounded-lg shadow-md">
             <div>
               <div className="flex items-center space-x-3 mb-2">
-                <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-10 w-10 rounded-full" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-0">Smile Hot Dog Gijón</h3>
+                <img 
+                  src="/logo.PNG" 
+                  alt="Logo de Smile Hot Dog Gijón - Hot Dogs en Cimavilla, Asturias" 
+                  className="h-10 w-10 rounded-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 className="text-2xl font-bold text-gray-900 mb-0" translate="no">Smile Hot Dog Gijón</h3>
               </div>
               <p className="mt-2 text-gray-600">
-                Parte del grupo <span className="font-semibold" style={{ color: CORPORATE_RED }}>Smile Smash Burger</span>, trayendo los mejores hot dogs a Gijón.
+                Parte del grupo{' '}<span className="font-semibold" style={{ color: CORPORATE_RED }} translate="no">Smile Smash Burger</span>, trayendo los mejores{' '}<span translate="no">hot dogs</span>{' '}a Gijón.
               </p>
             </div>
             <div className="space-y-6">

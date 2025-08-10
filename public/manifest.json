@@ -1,0 +1,30 @@
+{
+  "name": "Smile Hot Dog Gijón - Hot Dogs",
+  "short_name": "Smile Hot Dog",
+  "description": "Los mejores Hot Dogs de Gijón en Cimavilla, Asturias. Salchichas bockwurst XXL y pan brioche artesanal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b10000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.PNG",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurant", "lifestyle"],
+  "lang": "es",
+  "dir": "ltr",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+}

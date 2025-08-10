@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.smilehotdog.es/sitemap.xml
+
+# Crawl-delay para ser respetuoso con el servidor
+Crawl-delay: 1
+
+# Permitir acceso a recursos importantes
+Allow: /logo.PNG
+Allow: /portada.webp
+Allow: /*.webp
+
+# Bloquear archivos innecesarios
+Disallow: /index.css
+Disallow: /index.tsx
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Instrucciones específicas para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Instrucciones específicas para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

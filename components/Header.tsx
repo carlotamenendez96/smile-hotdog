@@ -6,6 +6,19 @@ import { ChevronRightIcon } from './icons/ChevronRightIcon';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es dispositivo móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Prevenir scroll del body cuando el menú está abierto
   useEffect(() => {
@@ -36,6 +49,22 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  // Efecto adicional para asegurar que el scroll se restaure correctamente
+  useEffect(() => {
+    const handleResize = () => {
+      if (!isMenuOpen) {
+        // Restaurar scroll en resize si el menú no está abierto
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        document.body.style.overflow = '';
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
@@ -43,10 +72,42 @@ const Header: React.FC = () => {
       const targetId = href.substring(1);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        // Calcular la posición del elemento objetivo
+        const elementPosition = targetElement.offsetTop;
+        // Añadir offset para el header fijo (ajustar según dispositivo)
+        const offsetPosition = elementPosition - (isMobile ? 100 : 80);
+        
+        // Cerrar el menú móvil primero si está abierto
+        if (isMenuOpen) {
+          setIsMenuOpen(false);
+          // Pequeño delay para que el menú se cierre antes de hacer scroll
+          setTimeout(() => {
+            try {
+              window.scrollTo({
+                top: Math.max(0, offsetPosition),
+                behavior: 'smooth'
+              });
+            } catch (error) {
+              // Fallback para navegadores que no soportan scroll suave
+              window.scrollTo(0, Math.max(0, offsetPosition));
+            }
+          }, 150);
+        } else {
+          // Si no hay menú móvil abierto, hacer scroll inmediatamente
+          try {
+            window.scrollTo({
+              top: Math.max(0, offsetPosition),
+              behavior: 'smooth'
+            });
+          } catch (error) {
+            // Fallback para navegadores que no soportan scroll suave
+            window.scrollTo(0, Math.max(0, offsetPosition));
+          }
+        }
+      } else {
+        console.warn(`Elemento con ID "${targetId}" no encontrado`);
       }
     }
-    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -60,7 +121,7 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center space-x-2">
               <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-10 w-10 rounded-full" />
-              <span className="text-3xl font-anton tracking-wider text-gray-900">SMILE<span className="font-pacifico text-3xl" style={{color: CORPORATE_RED, marginLeft: '6px'}}>HotDog</span></span>
+              <span className="text-3xl font-anton tracking-wider text-gray-900" translate="no">SMILE<span className="font-pacifico text-3xl" style={{color: CORPORATE_RED, marginLeft: '6px'}}>HotDog</span></span>
             </a>
           </div>
           
@@ -118,11 +179,11 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-2">
               <img src="/logo.PNG" alt="Logo Smile Hot Dog" className="h-10 w-10 sm:h-12 sm:w-12 rounded-full shadow-md" />
               <div className="text-left">
-                <h1 className="text-lg sm:text-xl font-anton tracking-wider text-gray-900">SMILE</h1>
-                <span className="font-pacifico text-base sm:text-lg" style={{color: CORPORATE_RED}}>HotDog</span>
+                <h1 className="text-lg sm:text-xl font-anton tracking-wider text-gray-900" translate="no">SMILE</h1>
+                <span className="font-pacifico text-base sm:text-lg" style={{color: CORPORATE_RED}} translate="no">HotDog</span>
               </div>
             </div>
-            <p className="text-xs sm:text-sm text-gray-600">¡Los mejores hot dogs de Gijón!</p>
+            <p className="text-xs sm:text-sm text-gray-600">¡Los mejores{' '}<span translate="no">hot dogs</span>{' '}de Gijón!</p>
           </div>
         </div>
 
@@ -204,7 +265,7 @@ const Header: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-red-500">⭐</span>
-                <span>Los mejores hot dogs de la ciudad</span>
+                <span>Los mejores{' '}<span translate="no">hot dogs</span>{' '}de la ciudad</span>
               </div>
             </div>
           </div>
@@ -213,7 +274,7 @@ const Header: React.FC = () => {
         {/* Footer del menú */}
         <div className="px-4 sm:px-6 pb-6 sm:pb-8 bg-white border-t border-gray-100">
           <div className="text-center">
-            <p className="text-xs text-gray-400 mb-2">SMILE HotDog</p>
+            <p className="text-xs text-gray-400 mb-2" translate="no">SMILE HotDog</p>
             <p className="text-xs text-gray-400">Gracias por elegirnos</p>
           </div>
         </div>

@@ -22,17 +22,19 @@ const Hero: React.FC = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
+      role="banner"
+      aria-label="Portada de Smile Hot Dog Gijón - Hot Dogs en Cimavilla"
     >
       <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-left">
         <div className="max-w-2xl">
           <h1 className="font-anton uppercase tracking-wide text-5xl sm:text-6xl lg:text-7xl text-white">
-            El Hot Dog que Gijón Estaba Esperando.
+            El{' '}<span translate="no">Hot Dog</span>{' '}que Gijón Estaba Esperando.
           </h1>
           <p className="mt-6 max-w-xl text-xl text-gray-200">
-            Pan brioche tierno, salchicha bockwurst y combinaciones que te sorprenderán. La auténtica explosión de sabor hot dog te espera en el corazón de <strong className="font-semibold text-white">Cimavilla</strong>.
+            Pan brioche tierno, salchicha bockwurst y combinaciones que te sorprenderán. La auténtica explosión de sabor{' '}<span translate="no">hot dog</span>{' '}te espera en el corazón de <strong className="font-semibold text-white">Cimavilla</strong>.
           </p>
-           <p className="mt-8 text-xl tracking-widest uppercase font-semibold text-white/80">
+           <p className="mt-8 text-xl tracking-widest uppercase font-semibold text-white/80" translate="no">
             Smile, it's gonna get hot.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
