@@ -54,7 +54,7 @@ const InfoSection: React.FC = () => {
                 <div className="flex-shrink-0 pt-1"><ClockIcon /></div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">Horario</h4>
-                  <p className="text-gray-600">Lunes a Domingo: 19:00 - 23:30</p>
+                  <p className="text-gray-600">Martes a Domingo: 19:00 - 00:00</p>
                 </div>
               </div>
             </div>

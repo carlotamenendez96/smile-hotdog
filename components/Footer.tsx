@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
               33201 Cimavilla, Gijón, Asturias
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110" title="Visita nuestro Facebook">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110" title="Visita nuestro Facebook">
                 <span className="sr-only">Facebook</span>
                 <FacebookIcon />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110" title="Visita nuestro Instagram">
+              </a> */}
+              <a href='https://www.instagram.com/smilehot.dog/' target='_blank' className="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110" title="Visita nuestro Instagram">
                 <span className="sr-only">Instagram</span>
                 <InstagramIcon />
               </a>

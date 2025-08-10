@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ChevronRightIcon: React.FC<{onClick: () => void}> = ({onClick}) => (
+export const ChevronRightIcon: React.FC<{onClick?: () => void; className?: string}> = ({onClick, className = "w-8 h-8"}) => (
   <svg 
     onClick={onClick}
     xmlns="http://www.w3.org/2000/svg" 
@@ -8,7 +8,7 @@ export const ChevronRightIcon: React.FC<{onClick: () => void}> = ({onClick}) => 
     viewBox="0 0 24 24" 
     strokeWidth={2.5} 
     stroke="currentColor" 
-    className="w-8 h-8"
+    className={className}
   >
     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
   </svg>
