@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-500 text-center">&copy; {new Date().getFullYear()}{' '}<span translate="no">Smile Hot Dog</span>{' '}Gijón. Especialistas en Hot Dogs en Asturias. Todos los derechos reservados.</p>
           <p className="text-xs text-gray-600 text-center mt-2">
-            Web creada por{' '}<span className="font-semibold" translate="no">Carlota Menéndez Álvarez</span>  
+            Web creada por{' '}<a href="https://www.linkedin.com/in/carlotamenendezalvarez" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-500 hover:text-gray-400 transition-colors" title="Ver perfil de LinkedIn de Carlota Menéndez Álvarez" translate="no">Carlota Menéndez Álvarez</a>  
             <a href="/sitemap.xml" className="ml-2 text-gray-500 hover:text-gray-400" title="Sitemap XML" style={{display: 'none'}}>Sitemap</a> 
             <a href="/robots.txt" className="ml-2 text-gray-500 hover:text-gray-400" title="Robots.txt" style={{display: 'none'}}>Robots.txt</a>
           </p>

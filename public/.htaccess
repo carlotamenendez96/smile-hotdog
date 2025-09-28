@@ -73,3 +73,4 @@ RewriteCond %{HTTP_REFERER} !^https?://(www\.)?smilehotdog\.es [NC]
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?google\.com [NC]
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bing\.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+
