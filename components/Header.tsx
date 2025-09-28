@@ -132,7 +132,7 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="hidden md:block">
-            <a href="#menu" onClick={handleNavClick} className="group inline-block text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer shadow-md hover:shadow-lg" style={{ backgroundColor: CORPORATE_RED }}>
+            <a href="https://glovoapp.com/es/es/gijon/smile-hot-dog-gijon/" target="_blank" rel="noopener noreferrer" className="group inline-block text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer shadow-md hover:shadow-lg" style={{ backgroundColor: CORPORATE_RED }} title="Pedir en Glovo - Smile Hot Dog Gijón">
               <span className="group-hover:brightness-110 transition-all duration-300">Haz tu pedido</span>
             </a>
           </div>
@@ -236,9 +236,11 @@ const Header: React.FC = () => {
               <p className="text-red-100 text-xs sm:text-sm">¡Haz tu pedido ahora!</p>
             </div>
             <a 
-              href="#menu" 
-              onClick={handleNavClick} 
+              href="https://glovoapp.com/es/es/gijon/smile-hot-dog-gijon/" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="group w-full inline-flex items-center justify-center text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30"
+              title="Pedir en Glovo - Smile Hot Dog Gijón"
             >
               <span className="text-base sm:text-lg mr-2">🍔</span>
               <span className="text-sm sm:text-base">Haz tu pedido</span>
